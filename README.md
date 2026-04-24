@@ -1,39 +1,44 @@
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 body {
- font-family: Arial, sans-serif;
+ font-family: 'Agenda', 'Inter', sans-serif;
 }
 
+/* CONTAINER */
 .hub-container {
- max-width: 1100px;
+ max-width: 1150px;
  margin: auto;
  padding: 20px;
 }
 
 /* HERO */
 .hub-hero {
- text-align: center;
- padding: 40px 20px;
+ background: linear-gradient(135deg, #003e7e, #257cb6);
+ color: white;
+ padding: 50px 30px;
+ border-radius: 12px;
 }
 
 .hub-hero h1 {
- font-size: 32px;
+ font-size: 34px;
  margin-bottom: 10px;
 }
 
 .hub-hero p {
- color: #555;
- font-size: 16px;
+ opacity: 0.9;
+ max-width: 600px;
 }
 
-/* SECTION TITLES */
+/* SECTION */
 .section-title {
  font-size: 24px;
- margin: 40px 0 20px;
- font-weight: bold;
+ margin: 40px 0 10px;
+ font-weight: 600;
+ color: #003e7e;
 }
 
-/* CARD GRID */
+/* GRID */
 .card-grid {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -42,58 +47,50 @@ body {
 
 /* CARD */
 .card {
- border: 1px solid #e0e0e0;
  border-radius: 10px;
  padding: 20px;
  background: white;
+ border: 1px solid #eee;
  transition: 0.3s;
  position: relative;
+ overflow: hidden;
+}
+
+/* TOP ACCENT BAR */
+.card::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 4px;
+ width: 100%;
+ background: #00c0f3;
 }
 
 .card:hover {
- transform: translateY(-5px);
- box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+ transform: translateY(-6px);
+ box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
-/* CARD TITLE */
+/* TITLE */
 .card h3 {
- margin-bottom: 10px;
+ color: #003e7e;
 }
 
-/* EXPANDABLE */
-.card input {
- display: none;
-}
-
-.card label {
- color: #0073e6;
+/* DESCRIPTION */
+.card p {
  font-size: 14px;
- cursor: pointer;
+ color: #555;
 }
 
-.card-content {
- max-height: 0;
- overflow: hidden;
- transition: max-height 0.3s ease;
- font-size: 14px;
- color: #444;
-}
-
-.card input:checked ~ .card-content {
- max-height: 200px;
- margin-top: 10px;
-}
-
-/* BUTTON */
+/* CTA */
 .cta {
  display: inline-block;
- margin-top: 15px;
- padding: 8px 14px;
- background: #0073e6;
- color: white;
- border-radius: 5px;
- text-decoration: none;
+ margin-top: 12px;
  font-size: 13px;
+ color: #257cb6;
+ text-decoration: none;
+ font-weight: 600;
 }
 
 /* DIVIDER */
@@ -102,54 +99,57 @@ body {
  background: #eee;
  margin: 50px 0;
 }
+
+/* BOTTOM CTA */
+.cta-section {
+ background: #f5f9fc;
+ border-radius: 12px;
+ padding: 30px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.cta-button {
+ background: #00c0f3;
+ color: white;
+ padding: 12px 20px;
+ border-radius: 6px;
+ text-decoration: none;
+ font-weight: 600;
+}
+
 </style>
 
 <div class="hub-container">
 
 <!-- HERO -->
 <div class="hub-hero">
-<h1>Grow Your Career at Wintrust</h1>
-<p>Explore professional and leadership competencies designed to support your growth.</p>
+<h1>Grow. Lead. Succeed.</h1>
+<p>Explore professional and leadership competencies designed to support your growth at Wintrust.</p>
 </div>
 
 <!-- PROFESSIONAL -->
 <div class="section-title">Professional Competencies</div>
 
 <div class="card-grid">
-
 <div class="card">
 <h3>Communication</h3>
-<input type="checkbox" id="p1">
-<label for="p1">Learn more</label>
-<div class="card-content">
-       Build clear, confident communication across teams and leadership levels.
-<br>
-<a href="#" class="cta">View Courses</a>
-</div>
+<p>Communicate clearly and confidently to inform, influence, and inspire.</p>
+<a href="#" class="cta">Explore Learning →</a>
 </div>
 
 <div class="card">
 <h3>Analytical Thinking</h3>
-<input type="checkbox" id="p2">
-<label for="p2">Learn more</label>
-<div class="card-content">
-       Strengthen your ability to analyze data and make informed decisions.
-<br>
-<a href="#" class="cta">View Courses</a>
-</div>
+<p>Evaluate information and make data-driven decisions.</p>
+<a href="#" class="cta">Explore Learning →</a>
 </div>
 
 <div class="card">
 <h3>Business Acumen</h3>
-<input type="checkbox" id="p3">
-<label for="p3">Learn more</label>
-<div class="card-content">
-       Understand how your role impacts broader business strategy and performance.
-<br>
-<a href="#" class="cta">View Courses</a>
+<p>Understand how your work impacts business performance.</p>
+<a href="#" class="cta">Explore Learning →</a>
 </div>
-</div>
-
 </div>
 
 <div class="divider"></div>
@@ -158,41 +158,34 @@ body {
 <div class="section-title">Leadership Competencies</div>
 
 <div class="card-grid">
-
 <div class="card">
 <h3>Coaching & Development</h3>
-<input type="checkbox" id="l1">
-<label for="l1">Learn more</label>
-<div class="card-content">
-       Learn how to support and develop others through effective coaching.
-<br>
-<a href="#" class="cta">Explore Learning Path</a>
-</div>
+<p>Empower others through feedback, support, and growth.</p>
+<a href="#" class="cta">Explore Path →</a>
 </div>
 
 <div class="card">
 <h3>Strategic Thinking</h3>
-<input type="checkbox" id="l2">
-<label for="l2">Learn more</label>
-<div class="card-content">
-       Develop long-term thinking and decision-making capabilities.
-<br>
-<a href="#" class="cta">Explore Learning Path</a>
-</div>
+<p>Think critically and make forward-looking decisions.</p>
+<a href="#" class="cta">Explore Path →</a>
 </div>
 
 <div class="card">
 <h3>Emotional Intelligence</h3>
-<input type="checkbox" id="l3">
-<label for="l3">Learn more</label>
-<div class="card-content">
-       Build self-awareness and strengthen relationships across your team.
-<br>
-<a href="#" class="cta">Explore Learning Path</a>
+<p>Strengthen relationships through awareness and empathy.</p>
+<a href="#" class="cta">Explore Path →</a>
 </div>
 </div>
 
+<div class="divider"></div>
+
+<!-- CTA -->
+<div class="cta-section">
+<div>
+<h3 style="margin:0;">Not sure where to start?</h3>
+<p style="margin:5px 0; color:#555;">Find learning tailored to your goals.</p>
+</div>
+<a href="#" class="cta-button">Find My Path</a>
 </div>
 
 </div>
-
