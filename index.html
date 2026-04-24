@@ -1,58 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>GitHub Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Hub</title>
+
 <style>
-   body {
-     margin: 0;
-     font-family: Arial, sans-serif;
-     background: linear-gradient(135deg, #003e7e, #257cb6, #00c0f3);
-     color: white;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     text-align: center;
-   }
-   .card {
-     background: rgba(255, 255, 255, 0.1);
-     padding: 40px;
-     border-radius: 16px;
-     backdrop-filter: blur(10px);
-     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-   }
-   h1 {
-     margin-bottom: 10px;
-     font-size: 36px;
-   }
-   p {
-     opacity: 0.9;
-     font-size: 18px;
-   }
-   .btn {
-     margin-top: 20px;
-     padding: 10px 20px;
-     border: none;
-     border-radius: 8px;
-     background: white;
-     color: #003e7e;
-     font-weight: bold;
-     cursor: pointer;
-   }
-   .btn:hover {
-     opacity: 0.9;
-   }
+body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background: #f5f7fa;
+}
+
+/* HERO */
+.hero {
+ background: linear-gradient(135deg, #003e7e, #257cb6, #00c0f3);
+ color: white;
+ text-align: center;
+ padding: 80px 20px;
+ border-radius: 12px;
+ margin: 20px;
+}
+
+.hero h1 {
+ font-size: 40px;
+ margin-bottom: 10px;
+}
+
+.hero p {
+ font-size: 18px;
+}
+
+/* SECTION */
+.section {
+ max-width: 1100px;
+ margin: auto;
+ padding: 20px;
+}
+
+.section h2 {
+ text-align: center;
+ color: #003e7e;
+ margin: 30px 0;
+}
+
+/* CARDS */
+.grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+}
+
+.card {
+ background: white;
+ border-radius: 12px;
+ padding: 20px;
+ border-top: 4px solid #257cb6;
+ box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.icon {
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ background: #eef3f8;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 22px;
+ margin-bottom: 10px;
+}
+
+.card h3 {
+ color: #257cb6;
+}
+
+/* CTA */
+.cta {
+ max-width: 1100px;
+ margin: 40px auto;
+ background: #eaf1f7;
+ padding: 30px;
+ border-radius: 12px;
+ text-align: center;
+}
+
+.cta button {
+ background: #003e7e;
+ color: white;
+ padding: 12px 24px;
+ border: none;
+ border-radius: 6px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+ .grid {
+   grid-template-columns: 1fr;
+ }
+}
 </style>
 </head>
+
 <body>
-<div class="card">
-<h1>🚀 Repo is Live</h1>
-<p>If you can see this, your GitHub repo is working.</p>
-<button class="btn" onclick="alert('GitHub is connected!')">
-     Test Button
-</button>
+
+<div class="hero">
+<h1>Your Learning Starts Here</h1>
+<p>Explore professional and leadership competencies designed to grow your career at Wintrust.</p>
 </div>
+
+<div class="section">
+<h2>Professional Competencies</h2>
+
+<div class="grid">
+<div class="card">
+<div class="icon">💬</div>
+<h3>Communication</h3>
+<p>Develop clear, confident communication across teams.</p>
+</div>
+
+<div class="card">
+<div class="icon">👥</div>
+<h3>Collaboration</h3>
+<p>Work effectively across departments to achieve goals.</p>
+</div>
+
+<div class="card">
+<div class="icon">✔️</div>
+<h3>Accountability</h3>
+<p>Own your work and deliver results consistently.</p>
+</div>
+</div>
+
+<h2>Leadership Competencies</h2>
+
+<div class="grid">
+<div class="card">
+<div class="icon">🚩</div>
+<h3>Leading Others</h3>
+<p>Inspire and guide teams to perform at their best.</p>
+</div>
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Strategic Thinking</h3>
+<p>Make decisions aligned with long-term goals.</p>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h3>Coaching & Development</h3>
+<p>Support growth through feedback and mentoring.</p>
+</div>
+</div>
+</div>
+
+<div class="cta">
+<h2>Ready to Grow?</h2>
+<p>Access your learning and start building your skills today.</p>
+<button>View My Learning →</button>
+</div>
+
 </body>
 </html>
